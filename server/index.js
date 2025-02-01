@@ -6,10 +6,9 @@ import cors from "cors";
 const app = express();
 const server = http.createServer(app);
 
-app.get("/", (req, res) => res.send("Server is running..."));
-
-
 app.use(cors({ origin: "http://localhost:5174" }));  // ✅ Allow frontend URL
+
+app.get("/", (_, res) => res.send("Server is running..."));
 
 const io = new Server(server, {
   cors: {

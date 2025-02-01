@@ -45,5 +45,4 @@ function Chat() {
   );
 }
 
-// export default Chat;
-export default socket;
+export default Chat;
